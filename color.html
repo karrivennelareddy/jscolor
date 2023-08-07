@@ -1,4 +1,4 @@
-<!-- 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,75 +13,22 @@
         justify-content:center;
         margin-top: 350px;
     }
+    .button {border-radius: 50%;}
 </style>
 <body>
-    <button>Click Me!</button>
+    <button class="button button">Click Me!</button>
 </body>
 <script>
     const button=document.querySelector("button");
     const body=document.querySelector("body");
     const color=['violet','indigo','blue','green','yellow','orange','red'];
-    body.style.backgroundColor='pink';
+    body.style.backgroundColor='black';
+    button.style.backgroundColor = "powderblue";
+    button.style.width = "150px";
+button.style.height = "50px"; 
     document.addEventListener('click',function(){
            const colorIndex=parseInt(Math.random()*color.length);
            body.style.backgroundColor=color[colorIndex];
     });
 </script>
-</html> -->
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Color Changer</title>
-</head>
-<style>
-    body {
-        display: flex;
-        text-align: center;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        margin: 0;
-        background-color: pink;
-        transition: background-color 0.3s ease;
-    }
-
-    button {
-        padding: 10px 20px;
-        font-size: 16px;
-        border: none;
-        cursor: pointer;
-        background-color: #333;
-        color: white;
-        border-radius: 4px;
-    }
-</style>
-<body>
-    <button>Click Me!</button>
-
-    <script>
-        const button = document.querySelector("button");
-        const body = document.querySelector("body");
-        const color = ['violet', 'indigo', 'blue', 'green', 'yellow', 'orange', 'red'];
-        let currentColorIndex = 0;
-
-        body.style.backgroundColor = color[currentColorIndex];
-
-        button.addEventListener('click', function () {
-            currentColorIndex = (currentColorIndex + 1) % color.length;
-            body.style.backgroundColor = color[currentColorIndex];
-        });
-
-        // Add keyboard shortcut to change color (Press "C")
-        document.addEventListener('keydown', function (event) {
-            if (event.key === 'c' || event.key === 'C') {
-                currentColorIndex = (currentColorIndex + 1) % color.length;
-                body.style.backgroundColor = color[currentColorIndex];
-            }
-        });
-    </script>
-</body>
-</html>
-
+</html> 
