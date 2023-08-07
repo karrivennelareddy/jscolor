@@ -23,9 +23,12 @@
     const body=document.querySelector("body");
     const color=['violet','indigo','blue','green','yellow','orange','red'];
     body.style.backgroundColor='black';
-    button.style.backgroundColor = "powderblue";
-    button.style.width = "150px";
-button.style.height = "50px"; 
+    button.style.color = "white";
+    button.style.background = "radial-gradient(#00edff,#ff99cf)";
+    button.style.width = "250px";
+button.style.height = "120px"; 
+button.style.fontSize = "40px"; 
+button.style.fontStyle = "italic"; 
     document.addEventListener('click',function(){
            const colorIndex=parseInt(Math.random()*color.length);
            body.style.backgroundColor=color[colorIndex];
